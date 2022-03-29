@@ -1,0 +1,107 @@
+/*generics*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+/*content*/
+
+/***HEADER***/
+header{
+    padding: 5px 0;
+    background-color: hsl(0deg 0% 92%);
+}
+
+.header-left{
+    border-right: 1px solid lightgray;
+}
+
+.profile{
+    height: 45px;
+    border-radius: 50%;
+}
+/*** / HEADER***/
+
+/***MAIN LEFT***/
+main{
+    height: 100%;
+}
+
+.notifications-container{
+    background-color: hsl(199deg 95% 77%);
+}
+
+.notifications-container i{
+    font-size: 35px;
+    border-radius: 50%;
+    background-color: white;
+    color: hsl(199deg 95% 77%);
+}
+
+.notifications-container h4{
+    font-size: 12px;
+}
+
+.notifications-container p{
+    font-size: 12px;
+    color: gray;
+    text-decoration: underline;
+}
+
+.search-container{
+    margin: 2px 0;
+}
+
+#lens{
+    background-color: white;
+    color: gray;
+}
+
+#search{
+    border: 1px solid lightgray;
+    font-size: 12px;
+}
+
+.contact-container{
+    position: relative;
+    padding: 8px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.chat-info{
+    margin: 0 auto;
+}
+
+.contact-name{
+    font-size: 16px;
+}
+
+.last-message{
+    font-size: 12px;
+    color: gray;
+}
+
+.time{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 10px;
+    color: gray;
+}
+
+
+/*** / MAIN LEFT***/
+
+/***MAIN RIGHT***/
+
+.chat{
+    background-image: url(../img/mine.jpg);
+}
+
+/*** / MAIN RIGHT***/
