@@ -14,7 +14,9 @@ body{
 
 /***HEADER***/
 header{
-    padding: 5px 0;
+    height: 8vh;
+    line-height: 8vh;
+    vertical-align: middle;
     background-color: hsl(0deg 0% 92%);
 }
 
@@ -23,39 +25,57 @@ header{
 }
 
 .profile{
-    height: 45px;
+    height: 40px;
     border-radius: 50%;
 }
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav i{
+    margin: 0 5px;
+    color: hsl(0deg 0% 69%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
 /*** / HEADER***/
 
 /***MAIN LEFT***/
-main{
-    height: 100%;
+
+
+.left{
+    height: 92vh;
 }
 
 .notifications-container{
+    padding: 10px 0;
     background-color: hsl(199deg 95% 77%);
 }
 
 .notifications-container i{
-    font-size: 35px;
+    font-size: 20px;
     border-radius: 50%;
+    padding: 10px;
     background-color: white;
     color: hsl(199deg 95% 77%);
 }
 
 .notifications-container h4{
     font-size: 12px;
+    margin: 0;
 }
 
-.notifications-container p{
+.notifications-container a{
     font-size: 12px;
     color: gray;
-    text-decoration: underline;
+    margin: 0;
 }
 
 .search-container{
-    margin: 2px 0;
+    margin: 5px 0;
 }
 
 #lens{
@@ -72,6 +92,7 @@ main{
     position: relative;
     padding: 8px 0;
     border-bottom: 1px solid lightgray;
+    cursor: pointer;
 }
 
 .chat-info{
@@ -94,14 +115,15 @@ main{
     font-size: 10px;
     color: gray;
 }
-
-
 /*** / MAIN LEFT***/
+
 
 /***MAIN RIGHT***/
 
 .chat{
+    padding: 0;
     background-image: url(../img/mine.jpg);
 }
 
 /*** / MAIN RIGHT***/
+

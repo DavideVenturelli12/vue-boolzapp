@@ -175,10 +175,24 @@ const app = new Vue({
     el: '#boolzapp',
     data: {
         contacts,
+        selectedContact: null,
     },
     methods: {
         imgURLAvatar(imgContact) {
             return `img/avatar${imgContact.avatar}.jpg`
+        },
+        showLastMessage(contact) {
+            const messages = contact.messages;
+
+            messages.forEach((message, index) => {
+            });
+            const lastMessage = messages[messages.length - 1].message;
+            //console.log(lastMessage);
+            return lastMessage;
+        },
+        showActiveChat(i) {
+            this.selectedContact = i;
         }
+
     }
 })

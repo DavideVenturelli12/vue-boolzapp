@@ -23,15 +23,15 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
+                        <!--HEADER LEFT-->
                         <div class="row">
-                            <!--HEADER LEFT-->
                             <div class="col-4 header-left">
                                 <div class="row">
                                     <div class="col-6">
                                         <img class="profile" src="img/avatar_io.jpg" alt="immagine personale">
                                         <span>Sofia</span>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-6 nav">
                                         <div>
                                             <i class="fa-solid fa-circle-notch"></i>
                                             <i class="fa-solid fa-message"></i>
@@ -57,14 +57,14 @@
             <div class="container-fluid">
                 <div class="row">
                     <!--MAIN LEFT-->
-                    <div class="col-4">
+                    <div class="col-4 left">
                         <div class="row notifications-container">
                             <div class="col-3">
                                 <i class="fa-solid fa-bell-slash"></i>
                             </div>
                             <div class="col-9">
                                 <h4>Ricevi notifiche di nuovi messaggi</h4>
-                                <p>Attiva notifiche desktop</p>
+                                <a href="">Attiva notifiche desktop</a>
                             </div>
                         </div>
                         <div class="row">
@@ -80,14 +80,14 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12" v-for="contact in contacts">
+                            <div class="col-12" v-for="(contact, index) in contacts" @click="showActiveChat(index)">
                                 <div class="row contact-container">
                                     <div class="col-2 align-items-center">
                                         <img class="profile" :src="imgURLAvatar(contact)" alt="immagine contatto">
                                     </div>
                                     <div class="col-10 align-items-center">
                                         <h5 class="chat-info contact-name">{{contact.name}}</h5>
-                                        <p class="chat-info last-message">Ultimo messaggio inviato</p>
+                                        <p class="chat-info last-message">{{showLastMessage(contact)}}</p>
                                         <span class="time">12:00</span>
                                     </div>
                                 </div>
@@ -97,7 +97,14 @@
                     <!--/MAIN LEFT-->
 
                     <!--MAIN RIGHT-->
-                    <div class="col-8 chat"></div>
+                    <div class="col-8 chat">
+                        <div v-if="selectedContact !== null">
+                            <div>
+                                {{contacts[selectedContact].messages}}
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
