@@ -73,21 +73,19 @@ header{
 
 /***MAIN***/
 
-/*main-left*/
-
 main{
     display: flex;
     height: 92vh;
 }
+
+/*main-left*/
 
 .main-left{
     width: 35%;
     background-color: hsl(0deg 0% 98%);
 }
 
-.main-right{
-    width: 65%;
-}
+/*notification section*/
 
 .notifications{
     height: 8vh;
@@ -114,6 +112,10 @@ main{
     color: gray;
     font-size: 12px;
 }
+
+/* /notification section*/
+
+/*search section*/
 
 .search-container{
     height: 5vh;
@@ -147,7 +149,9 @@ main{
     width: 100%;
     padding-left: 10px;
 }
+/* /search section*/
 
+/*contact section*/
 .contact-box{
     display: flex;
     align-items: center;
@@ -183,16 +187,21 @@ main{
     font-size: 10px;
     color: gray;
 }
+/* /contact section*/
 
 /* /main-left*/
 
 
-/* /main-right*/
+/* main-right*/
 
 .main-right{
+    width: 65%;
+    
     background-image: url(../img/mine.jpg);
     overflow: auto;
 }
+
+/*chat section*/
 
 .chat-area{
     height: 92%;
@@ -224,6 +233,9 @@ main{
     display: flex;
     justify-content: flex-start;
 }
+/* /chat section*/
+
+/*message input section*/
 
 .message-input-container{
     height: 8%;
@@ -255,5 +267,6 @@ main{
     color: hsl(226deg 5% 48%);
 }
 
+/* /message input section*/
 
-
+/* /main-right*/

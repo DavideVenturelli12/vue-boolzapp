@@ -42,6 +42,7 @@
 
         <!--MAIN-->
         <main>
+            <!--main left-->
             <div class="main-left">
                 <!--notification section-->
                 <div class="notifications">
@@ -68,6 +69,7 @@
                 </div>
                 <!--/search section-->
 
+                <!--contact section-->
                 <div class="contact-container" v-for="(contact, index) in contacts">
                     <div class="contact-box">
                         <div class="contact-img">
@@ -79,11 +81,14 @@
                             <span class="time">12:00</span>
                         </div>
                     </div>
-
-
                 </div>
+                <!--/contact section-->
             </div>
+            <!--/main left-->
+
+            <!--main right-->
             <div class="main-right">
+                <!--chat section-->
                 <div class="chat-area">
                     <div class="sent">
                         <p>Hai portato a spasso il cane?</p>
@@ -95,6 +100,9 @@
                         <p>Tutto Fatto!</p>
                     </div>
                 </div>
+                <!--/chat section-->
+
+                <!--message input section-->
                 <div class="message-input-container">
                     <div class="emoticons">
                         <i class="fa-regular fa-face-smile"></i>
@@ -106,12 +114,12 @@
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>
+                <!--/message input section-->
             </div>
-
-
+            <!--/main right-->
         </main>
+        <!--/MAIN-->
     </div>
-
 </body>
 
 </html>
