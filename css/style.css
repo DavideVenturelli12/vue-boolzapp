@@ -19,6 +19,16 @@ header{
     background-color: hsl(0deg 0% 92%);
 }
 
+.personal-profile{
+     display: flex;
+     align-items: center;
+}
+
+.personal-profile span{
+    margin-left: 10px;
+    font-weight: 600;
+}
+
 .profile{
     width: 40px;
     border: 1px solid black;
@@ -106,7 +116,7 @@ main{
 }
 
 .search-container{
-    height: 8vh;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,7 +166,7 @@ main{
 }
 
 .contact-box h5{
-    margin: 0;
+    margin: 2px 0;
     font-size: 16px;
 }
 
@@ -168,8 +178,8 @@ main{
 
 .time{
     position: absolute;
-    top: 2px;
-    right: 2px;
+    top: 5px;
+    right: 5px;
     font-size: 10px;
     color: gray;
 }
@@ -180,11 +190,18 @@ main{
 /* /main-right*/
 
 .main-right{
-    padding: 25px;
     background-image: url(../img/mine.jpg);
+    overflow: auto;
 }
 
+.chat-area{
+    height: 92%;
+    padding: 30px;
+}
 
+.sent, .received{
+    margin-bottom: 15px;
+}
 
 .sent{
     display: flex;
@@ -207,3 +224,36 @@ main{
     display: flex;
     justify-content: flex-start;
 }
+
+.message-input-container{
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(27deg 27% 94%);
+}
+
+.message-input{
+    width: 80%;
+}
+
+.emoticons, .microphone{
+    width: 10%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: hsl(226deg 5% 48%);
+}
+
+.message-input input{
+    height: 35px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: hsl(226deg 5% 48%);
+}
+
+
+
