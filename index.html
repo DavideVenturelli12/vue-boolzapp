@@ -18,6 +18,7 @@
     <div id="boolzapp">
         <!--HEADER-->
         <header>
+            <!--header left-->
             <div class="header-left">
                 <div class="personal-profile">
                     <img class="profile" src="img/avatar_io.jpg" alt="sofia">
@@ -29,14 +30,21 @@
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </div>
+            <!--/header left-->
 
+            <!--header right-->
             <div class="header-right">
+                <div class="selected-contact">
+                    <img class="profile" :src="'img/avatar' + selectedContact.avatar + '.jpg'" alt="immagine contatto">
+                    <span>{{selectedContact.name}}</span>
+                </div>
                 <div>
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-paperclip"></i>
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </div>
+            <!--/header right-->
         </header>
         <!--/HEADER-->
 
@@ -70,7 +78,8 @@
                 <!--/search section-->
 
                 <!--contact section-->
-                <div class="contact-container" v-for="(contact, index) in contacts">
+                <div class="contact-container" v-for="(contact, index) in contacts" @click="selectContact(contact)"
+                    @click="showChat(index)">
                     <div class="contact-box">
                         <div class="contact-img">
                             <img class="profile" :src="imgURLAvatar(contact)" alt="immagine contatto">
@@ -90,14 +99,10 @@
             <div class="main-right">
                 <!--chat section-->
                 <div class="chat-area">
-                    <div class="sent">
-                        <p>Hai portato a spasso il cane?</p>
-                    </div>
-                    <div class="sent">
-                        <p>Ricordati di stendere i panni</p>
-                    </div>
-                    <div class="received">
-                        <p>Tutto Fatto!</p>
+                    <div v-for="item in selectedContact.messages" :class="item.status">
+                        <div>
+                            <p>{{item.message}}</p>
+                        </div>
                     </div>
                 </div>
                 <!--/chat section-->
