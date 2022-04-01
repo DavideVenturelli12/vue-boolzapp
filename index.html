@@ -78,16 +78,17 @@
                 <!--/search section-->
 
                 <!--contact section-->
-                <div class="contact-container" v-for="(contact, index) in contacts" @click="selectContact(contact)"
-                    @click="showChat(index)">
-                    <div class="contact-box">
-                        <div class="contact-img">
-                            <img class="profile" :src="imgURLAvatar(contact)" alt="immagine contatto">
-                        </div>
-                        <div class="contact-info">
-                            <h5>{{contact.name}}</h5>
-                            <p>{{showLastMessage(contact)}}</p>
-                            <span class="time">12:00</span>
+                <div class="contact-container">
+                    <div v-for="(contact, index) in contacts" @click="selectContact(contact)" @click="showChat(index)">
+                        <div class="contact-box">
+                            <div class="contact-img">
+                                <img class="profile" :src="imgURLAvatar(contact)" alt="immagine contatto">
+                            </div>
+                            <div class="contact-info">
+                                <h5>{{contact.name}}</h5>
+                                <p>{{showLastMessage(contact)}}</p>
+                                <span class="time">12:00</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,9 +114,11 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <div class="message-input">
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input @keyUp.enter="addNewMessage(contacts[0].messages)"
+                            @click="addNewMessage(contacts[0].messages)" type="text" placeholder="Scrivi un messaggio"
+                            v-model="newMessage">
                     </div>
-                    <div class="microphone">
+                    <div class=" microphone">
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>

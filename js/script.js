@@ -193,7 +193,8 @@ const app = new Vue({
     el: '#boolzapp',
     data: {
         contacts,
-        selectedContact: contacts[0]
+        selectedContact: contacts[0],
+        newMessage: ''
     },
     methods: {
         imgURLAvatar(imgContact) {
@@ -210,6 +211,27 @@ const app = new Vue({
         },
         selectContact(contact) {
             this.selectedContact = contact;
+        },
+        addNewMessage(item) {
+            //console.log(item);
+            const nuovoMessaggio = {
+                date: '12:00',
+                message: this.newMessage,
+                status: 'sent'
+            }
+            if (this.newMessage.length > 0) {
+                item.push(nuovoMessaggio);
+                this.newMessage = '';
+                setTimeout(this.answerToMessage, 1000);
+            }
+        },
+        answerToMessage() {
+            const answer = {
+                date: '12:00',
+                message: 'Ok, va bene',
+                status: 'received'
+            }
+            this.contacts[0].messages.push(answer);
         }
     }
 })

@@ -156,9 +156,20 @@ main{
     width: 100%;
     padding-left: 10px;
 }
+
+.search-input input:focus-visible{
+    outline: none;
+}
+
 /* /search section*/
 
 /*contact section*/
+
+.contact-container{  
+    height: 77.5vh;
+    overflow-y: scroll;
+}
+
 .contact-box{
     display: flex;
     align-items: center;
@@ -213,6 +224,7 @@ main{
 .chat-area{
     height: 92%;
     padding: 30px;
+    overflow-y: scroll;
 }
 
 .sent, .received{
@@ -274,6 +286,10 @@ main{
     border-radius: 5px;
     padding-left: 10px;
     color: hsl(226deg 5% 48%);
+}
+
+.message-input input:focus-visible{
+    outline: none;
 }
 
 /* /message input section*/
