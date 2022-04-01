@@ -194,12 +194,14 @@ const app = new Vue({
     data: {
         contacts,
         selectedContact: contacts[0],
-        newMessage: ''
+        newMessage: '',
+        contactSearched: ''
     },
     methods: {
         imgURLAvatar(imgContact) {
             return `img/avatar${imgContact.avatar}.jpg`
         },
+
         showLastMessage(contact) {
             const messages = contact.messages;
 
@@ -209,13 +211,24 @@ const app = new Vue({
             //console.log(lastMessage);
             return lastMessage;
         },
+
+        showLastDate(contact) {
+            const messages = contact.messages;
+
+            messages.forEach((date, index) => {
+            });
+            const lastDate = messages[messages.length - 1].date;
+            return lastDate;
+        },
+
         selectContact(contact) {
             this.selectedContact = contact;
         },
+
         addNewMessage(item) {
             //console.log(item);
             const nuovoMessaggio = {
-                date: '12:00',
+                date: this.currentTime(),
                 message: this.newMessage,
                 status: 'sent'
             }
@@ -225,13 +238,20 @@ const app = new Vue({
                 setTimeout(this.answerToMessage, 1000);
             }
         },
+
         answerToMessage() {
             const answer = {
-                date: '12:00',
+                date: this.currentTime(),
                 message: 'Ok, va bene',
                 status: 'received'
             }
             this.contacts[0].messages.push(answer);
+        },
+        currentTime() {
+            let today = new Date();
+            let hh = String(today.getHours()).padStart(2, '0');
+            let mm = String(today.getMinutes()).padStart(2, '0');
+            return today = hh + ':' + mm;
         }
     }
 })

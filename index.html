@@ -86,8 +86,8 @@
                             </div>
                             <div class="contact-info">
                                 <h5>{{contact.name}}</h5>
-                                <p>{{showLastMessage(contact)}}</p>
-                                <span class="time">12:00</span>
+                                <p><i class="fa-solid fa-check"></i> {{showLastMessage(contact)}}</p>
+                                <span class="time">{{showLastDate(contact)}}</span>
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                 <div class="chat-area">
                     <div v-for="item in selectedContact.messages" :class="item.status">
                         <div>
-                            <p>{{item.message}}</p>
+                            <p>{{item.message}} <span><i class="fa-solid fa-check"></i> {{item.date}}</span></p>
                         </div>
                     </div>
                 </div>
