@@ -213,8 +213,7 @@ main{
 /* main-right*/
 
 .main-right{
-    width: 65%;
-    
+    width: 65%;    
     background-image: url(../img/mine.jpg);
     overflow: auto;
 }
