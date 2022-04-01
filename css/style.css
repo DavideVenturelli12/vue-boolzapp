@@ -198,10 +198,6 @@ main{
     color: gray;
 }
 
-.contact-info i{
-    color: rgb(146, 146, 146);
-}
-
 .time{
     position: absolute;
     top: 5px;
@@ -242,7 +238,10 @@ main{
 
 .sent span{
     font-size: 10px;
-    color: rgb(146, 146, 146);
+    color: rgb(146, 146, 146);    
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
 }
 
 .sent p{
@@ -250,6 +249,8 @@ main{
     border-radius: 5px;
     background-color: hsl(94deg 84% 85%);
     max-width: 350px;
+    padding-right: 45px;
+    position: relative;
 }
 
 .received{
@@ -260,6 +261,13 @@ main{
 .received span{
     font-size: 10px;
     color: rgb(146, 146, 146);
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+}
+
+.received i{
+    display: none;
 }
 
 .received p{
@@ -267,6 +275,8 @@ main{
     border-radius: 5px;
     background-color: white;
     max-width: 350px;
+    padding-right: 45px;
+    position: relative;
 }
 
 /* /chat section*/

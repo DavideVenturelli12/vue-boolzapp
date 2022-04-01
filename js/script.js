@@ -247,6 +247,7 @@ const app = new Vue({
             }
             this.contacts[0].messages.push(answer);
         },
+
         currentTime() {
             let today = new Date();
             let hh = String(today.getHours()).padStart(2, '0');
