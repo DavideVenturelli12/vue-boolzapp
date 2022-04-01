@@ -79,7 +79,7 @@
 
                 <!--contact section-->
                 <div class="contact-container">
-                    <div v-for="(contact, index) in contacts" @click="selectContact(contact)" @click="showChat(index)">
+                    <div v-for="(contact, index) in contacts" @click="selectContact(contact)">
                         <div class="contact-box">
                             <div class="contact-img">
                                 <img class="profile" :src="imgURLAvatar(contact)" alt="immagine contatto">
